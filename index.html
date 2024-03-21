@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <style>
+        body{
+   padding-right: 25px;
+   background: url(sr/background.jpg);
+   background-repeat: no-repeat;
+   background-size: auto;
+   padding-top: 25px;
+    padding-left: 25px;
+
+   
+}
+.inp{
+    border:none;
+    border-bottom: 1px solid gray;
+    color:gray;
+    width: 280px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    margin-left: 10px;
+    font-size: 15px;
+
+}
+
+.bot{
+    display: inline-block;
+    width:1349px;
+    height: 90px;
+    background-color: #173F5F;
+    position: absolute;
+    left: 0px;
+    top:630px;
+
+}
+
+.loginbox{
+   
+   display: inline-block;
+   height: 540px;
+   width: 360px;
+   margin-left: 9.7%;
+   margin-top: 0px;
+   margin-bottom: 10%;
+   background-color: white;
+   padding: center;
+   
+}
+
+.confont{
+   font-family: Arial;
+   font-size: 25px;
+
+}
+    </style>
+</head>
+<body>
+    
+    
+   <div class="loginbox">
+    <center>
+        <img src="sr/nainital.jpg" height="60px" width="280px"><br>
+        <div class="confont" style="margin-top: 5px;">Internet Banking Login</div>
+
+        <form action="select.html" id="captchaForm" method="POST">
+            <input class="inp" type="text" placeholder="User ID*" style="margin-top: 30px;" required><br><br><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="left: 200px;position: absolute;width: 20px;height: 20px;border: solid 2px;">
+  <label for="vehicle1" style="color: gray;top: 245px;left: 230px;position: absolute;"> Remember User ID </label><br>
+  <br>
+  <h6 style="font:message-box;font-size: 16px;color: gray;position:absolute;left:200px;top: 260px;">Verification</h6><br><br><br><br><br><br>
+
+  
+  <div id="captcha" style="background-image:url('sr/captcha.jpg');width: 100px;height: 30px;position: absolute;left:200px;top: 330px;font-size: 20px;"></div>
+  
+
+  <input class="inp" type="number" placeholder="Verification Code*" id="captchaInput" name="captchaInput" required>
+  <br>
+  <h6 style="font:message-box;font-size: 16px;color: rgb(35, 136, 231);position:absolute;left:200px;top: 420px;">Forget Password</h6>
+<br>
+<h6 style="color: red;position: absolute;left: 200px;top: 450px;">(For existing users only, not for fresh users)
+
+</h6>
+<input type="submit" value="LOGIN" style="color: white;background-color: rgb(153, 8, 8); width: 300px;height: 35px;position: absolute;top: 500px;left: 190px;border: none;font-size: 13px;">
+
+        </form>
+    </center>
+</div>
+<div class="bot">
+
+
+</div>
+    <script>
+        // Generate random CAPTCHA
+  function generateCaptcha() {
+    var captcha = "";
+    var characters = "0123456789";
+    for (var i = 0; i < 6; i++) {
+      captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return captcha;
+  }
+
+  // Display CAPTCHA in the form
+  function displayCaptcha() {
+    var captcha = generateCaptcha();
+    document.getElementById("captcha").innerText = captcha;
+    document.getElementById("captchaInput").setAttribute("data-correct-captcha", captcha);
+  }
+
+  // Initialize
+  displayCaptcha();
+
+  // Form submission validation
+  document.getElementById("captchaForm").addEventListener("submit", function(event) {
+    var captchaInput = document.getElementById("captchaInput").value;
+    var correctCaptcha = document.getElementById("captchaInput").getAttribute("data-correct-captcha");
+    if (captchaInput !== correctCaptcha) {
+      alert("CAPTCHA verification failed!");
+      event.preventDefault(); // Prevent form submission
+      displayCaptcha(); // Refresh CAPTCHA
+    }
+  });
+    </script>
+</body>
+</html>

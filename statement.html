@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="statement.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    #account-statement {
+      border: 1px solid #ccc;
+      padding: 16px;
+      width: 500px;
+    }
+
+    #account-statement th {
+      text-align: left;
+      padding-right: 16px;
+    }
+
+    #account-statement td {
+      padding: 4px 0;
+    }
+
+    #account-statement th:first-child,
+    #account-statement td:first-child {
+      padding-left: 16px;
+    }
+
+    #account-statement th:last-child,
+    #account-statement td:last-child {
+      text-align: right;
+    }
+
+    #account-statement tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #account-statement tr:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .topbox {
+      display: block;
+    }
+
+    body {
+      margin: 0px;
+      font-family: Verdana;
+    }
+
+    .logo {
+
+      top: 0%;
+      display: inline-block;
+      height: 50px;
+      width: 320px;
+      padding-top: 0%;
+      left: 1000px;
+      position: absolute;
+      top: 10px
+    }
+
+    .banlogo {
+      display: inline-block;
+      height: 80px;
+      width: 360px;
+    }
+
+    .topbar {
+      margin-top: 5px;
+      display: inline-block;
+      width: 100%;
+      height: 80px;
+      background-color: rgb(44, 89, 172);
+      position: absolute;
+
+    }
+
+    .fraud {
+      display: inline;
+      background-color: rgb(211, 56, 56);
+      color: white;
+      padding: 2px;
+      font-size: 15px;
+      margin-left: 20%;
+
+    }
+
+    .iconbox {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      color: #FAFAFA;
+      height: 100%;
+      width: 100px;
+      background-color: rgb(44, 89, 172);
+      border: none;
+    }
+
+    .left {
+      display: inline-block;
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      left: 100px;
+      top: 300px;
+
+    }
+
+    .acc {
+      display: inline-block;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: rgb(44, 89, 172);
+      color: white;
+      text-align: center;
+
+    }
+
+    .menu {
+      display: inline-block;
+      height: 350px;
+      overflow-y: scroll;
+      overflow-x: visible;
+
+
+    }
+
+    .menubox {
+      display: inline-block;
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+      color: black;
+      background-color: rgb(207, 230, 249);
+      border: none;
+      border-bottom: 1px solid rgb(23, 136, 173);
+
+    }
+
+    .space {
+      display: inline-block;
+      height: 50px;
+      width: 500px;
+      padding-left: 100px;
+      position: absolute;
+      top: 200px;
+
+    }
+
+    .statementbox {
+      display: inline-block;
+      width: 600px;
+      height: 180px;
+      padding: 5px 10px;
+    }
+
+    .innerbox {
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      padding-left: 50px;
+      padding-top: 10px;
+
+    }
+
+    .right {
+      display: inline-block;
+      width: 400px;
+      height: 500px;
+      position: absolute;
+      top: 300px;
+      left: 450px;
+
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      position: absolute;
+      display: inline-block;
+      height: 800px;
+    }
+    main{
+      width: 800px;
+    }
+    
+    thead{
+      width: 800px;
+    }
+
+    
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbox">
+    <img src="nainital.jpg" width="350px" height="100px" style="margin-left:50px;display:inline;">
+    <div class="logo">
+      <img src="userlogo.png" width="50px" height="50px" style="margin-top:0%;display:inline;">
+      <h3 style="color: cornflowerblue;display: inline;font-size: 10px;margin:0%;">Welcome,</h3>
+      <h1 style="color: cornflowerblue;display: inline;font-size:15px;font-weight: bolder;margin: 0%;">MANNAR COMPANY
+      </h1>
+      <h2 class="fraud" style="font-size:13px">Report Fraudulant Transaction</h2>
+    </div>
+
+  </div>
+  <div class="topbar">
+
+    <button class="iconbox" style="left:200px">
+      <i style="font-size:34px;" class="fa">&#xf2bc;</i><br>
+      <center>Card</center>
+    </button>
+    <button class="iconbox" style="left:230px">
+      <i style="font-size:34px" class="fa">&#xf2c0;</i>
+      <center>Card</center>
+    </button>
+    <button class="iconbox" style="left:240px">
+      <i style="font-size:34px" class="fa">&#xf2be;</i>
+      <center>Account</center>
+    </button>
+    <button class="iconbox" style="left:260px">
+      <i style='font-size:30px' class='fas'>&#xf543;</i>
+      <center>Card</center>
+    </button>
+
+    <botton class="fraud" onclick="window.location.href='index.html'" style="position:relative;left: 500px;padding: 10px;font-size: 20px;">Logout <i
+        style="font-size:20px" class="fa">&#xf023;</i></botton>
+
+  </div>
+  <div class="space" style="color: rgb(44, 89, 172);">Welcome to Internet Banking<br>
+    <hr style="color: rgb(44, 89, 172);margin-left: 6px;width: 1197px;">
+  </div>
+
+  <div class="left">
+    <div class="acc">Account</div>
+    <div class="menu">
+      <center>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Balance Enquiry</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Last Few Transaction</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='statement.html'">Account Statement
+        </botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Cheque Book Request</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Cheque Services</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Pension View</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Deposit</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Nomination</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Loan View</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Schemes Under Goverment
+          Businness</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Trade Finance View</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Stop Cheque Payment</botton>
+        <botton class="menubox" type="botton" onclick="window.location.href ='index.html'">Request Sevices</botton>
+    </div>
+  </div>
+
+  <div class="right">
+    <h6 style="color:rgb(44, 89, 172);font-size:25px;margin: 0px;">Statement of Account</h6>
+    <hr style="width: 850px;">
+    <br>
+
+
+    <main>
+
+      <div style="margin-left: 50px;">
+        <div class="statementbox">
+          <div class="innerbox" style="background-color: lightblue;">
+          <label for="cars">Select Account </label>
+          <select id="cars" required style="margin-left: 50px;width: 204px;height: 25px;">
+            <option value="saab">Select</option>
+            <option value="saab">TANTH|5573</option>
+          </select><br><br></div>
+          <div class="innerbox">
+            <label for="start_date">From Date </label>
+            <input type="date" id="start_date" name="start_date"
+              style="width: 200px;height: 20px;margin-left: 85px;"><br>
+          </div><br>
+          <div class="innerbox" style="background-color: lightblue;"><label for="end_date">To Date </label>
+            <input type="date" id="end_date" name="end_date"
+              style="width: 200px;height: 20px;margin-left: 107px;">
+          </div>
+        </div>
+        <br><button id="filterButton" style="margin-left: 130px;background-color: lightyellow;padding: 5px 15px;font-size: 15px;">View</button>
+      </div>
+      <table id="statementTable" style="display: none ;width:800px">
+
+        <thead style="background-color: lightblue;">
+          <tr>
+            <th>Date</th>
+            <th>Narration</th>
+            <th>Amount</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody id="statementBody">
+          <!-- Table rows will be populated dynamically -->
+        </tbody>
+      </table>
+
+      <button id="downloadButton" style="position: absolute;left: 400px;top:257px;background-color: lightblue;font-size: 15px;padding: 5px 15px;">Download</button>
+    </main>
+
+  </div>
+
+  <script>
+    // Updated example data with corrected balance values
+var data = [
+    // September 2023
+    {"Date": "2023-09-01", "Description": "Supplier Payment - ABC Corporation", "Amount": -25000, "Balance": -25000},
+    {"Date": "2023-09-02", "Description": "Salary Payment for September", "Amount": 30000, "Balance": 5000},
+    {"Date": "2023-09-03", "Description": "Client Payment - Project XYZ Completion", "Amount": 35000, "Balance": 40000},
+    {"Date": "2023-09-04", "Description": "Rent Payment for Office Space", "Amount": -22000, "Balance": 18000},
+    {"Date": "2023-09-07", "Description": "Equipment Purchase - XYZ Supplier", "Amount": -40000, "Balance": -22000},
+    {"Date": "2023-09-09", "Description": "Insurance Premium Payment", "Amount": -25000, "Balance": -47000},
+    {"Date": "2023-09-12", "Description": "Loan Repayment - Bank Loan", "Amount": -30000, "Balance": -77000},
+    {"Date": "2023-09-14", "Description": "Vendor Payment - DEF Inc.", "Amount": -28000, "Balance": -105000},
+    {"Date": "2023-09-16", "Description": "Consultancy Fee Payment", "Amount": 40000, "Balance": -65000},
+    {"Date": "2023-09-18", "Description": "Utilities Payment", "Amount": -15000, "Balance": -80000},
+    {"Date": "2023-09-20", "Description": "Client Payment - Project ABC Completion", "Amount": 45000, "Balance": -35000},
+    {"Date": "2023-09-22", "Description": "Tax Payment", "Amount": -35000, "Balance": -70000},
+    {"Date": "2023-09-24", "Description": "Supplier Payment - GHI Corporation", "Amount": -32000, "Balance": -102000},
+    {"Date": "2023-09-26", "Description": "Advertisement Expense", "Amount": -20000, "Balance": -122000},
+    {"Date": "2023-09-28", "Description": "Office Furniture Purchase", "Amount": -28000, "Balance": -150000},
+
+    // October 2023
+    {"Date": "2023-10-02", "Description": "Supplier Payment - DEF Corporation", "Amount": -22000, "Balance": -172000},
+    {"Date": "2023-10-04", "Description": "Salary Payment for October", "Amount": 27000, "Balance": -145000},
+    {"Date": "2023-10-07", "Description": "Client Payment - Project ABC Completion", "Amount": 32000, "Balance": -113000},
+    {"Date": "2023-10-09", "Description": "Rent Payment for Office Space", "Amount": -25000, "Balance": -138000},
+    {"Date": "2023-10-12", "Description": "Equipment Purchase - XYZ Supplier", "Amount": -35000, "Balance": -173000},
+    {"Date": "2023-10-15", "Description": "Insurance Premium Payment", "Amount": -20000, "Balance": -193000},
+    {"Date": "2023-10-18", "Description": "Loan Repayment - Bank Loan", "Amount": -28000, "Balance": -221000},
+    {"Date": "2023-10-20", "Description": "Vendor Payment - GHI Inc.", "Amount": -25000, "Balance": -246000},
+    {"Date": "2023-10-23", "Description": "Consultancy Fee Payment", "Amount": 38000, "Balance": -208000},
+    {"Date": "2023-10-26", "Description": "Utilities Payment", "Amount": -18000, "Balance": -226000},
+    {"Date": "2023-10-29", "Description": "Client Payment - Project XYZ Completion", "Amount": 35000, "Balance": -191000},
+
+    // November 2023
+    {"Date": "2023-11-02", "Description": "Supplier Payment - JKL Corporation", "Amount": -30000, "Balance": -221000},
+    {"Date": "2023-11-04", "Description": "Salary Payment for November", "Amount": 28000, "Balance": -193000},
+    {"Date": "2023-11-07", "Description": "Client Payment - Project ABC Completion", "Amount": 36000, "Balance": -157000},
+    {"Date": "2023-11-10", "Description": "Rent Payment for Office Space", "Amount": -24000, "Balance": -181000},
+    {"Date": "2023-11-13", "Description": "Equipment Purchase - MNO Supplier", "Amount": -42000, "Balance": -223000},
+    {"Date": "2023-11-16", "Description": "Insurance Premium Payment", "Amount": -22000, "Balance": -245000},
+    {"Date": "2023-11-19", "Description": "Loan Repayment - Bank Loan", "Amount": -30000, "Balance": -275000},
+    {"Date": "2023-11-22", "Description": "Vendor Payment - PQR Inc.", "Amount": -27000, "Balance": -302000},
+    {"Date": "2023-11-25", "Description": "Consultancy Fee Payment", "Amount": 39000, "Balance": -263000},
+    {"Date": "2023-11-28", "Description": "Utilities Payment", "Amount": -17000, "Balance": -280000},
+
+    // December 2023
+    {"Date": "2023-12-01", "Description": "Supplier Payment - STU Corporation", "Amount": -35000, "Balance": -315000},
+    {"Date": "2023-12-04", "Description": "Salary Payment for December", "Amount": 29000, "Balance": -286000},
+    {"Date": "2023-12-07", "Description": "Client Payment - Project XYZ Completion", "Amount": 37000, "Balance": -249000},
+    {"Date": "2023-12-10", "Description": "Rent Payment for Office Space", "Amount": -23000, "Balance": -272000},
+    {"Date": "2023-12-13", "Description": "Equipment Purchase - XYZ Supplier", "Amount": -40000, "Balance": -312000},
+    {"Date": "2023-12-16", "Description": "Insurance Premium Payment", "Amount": -21000, "Balance": -333000},
+    {"Date": "2023-12-19", "Description": "Loan Repayment - Bank Loan", "Amount": -31000, "Balance": -364000},
+    {"Date": "2023-12-22", "Description": "Vendor Payment - GHI Inc.", "Amount": -26000, "Balance": -390000},
+    {"Date": "2023-12-25", "Description": "Consultancy Fee Payment", "Amount": 40000, "Balance": -350000},
+    {"Date": "2023-12-28", "Description": "Utilities Payment", "Amount": -18000, "Balance": -368000},
+
+    // January 2024
+    {"Date": "2024-01-02", "Description": "Supplier Payment - DEF Corporation", "Amount": -32000, "Balance": -400000},
+    {"Date": "2024-01-05", "Description": "Salary Payment for January", "Amount": 31000, "Balance": -369000},
+    {"Date": "2024-01-08", "Description": "Client Payment - Project ABC Completion", "Amount": 38000, "Balance": -331000},
+    {"Date": "2024-01-11", "Description": "Rent Payment for Office Space", "Amount": -22000, "Balance": -353000},
+    {"Date": "2024-01-14", "Description": "Equipment Purchase - MNO Supplier", "Amount": -38000, "Balance": -391000},
+    {"Date": "2024-01-17", "Description": "Insurance Premium Payment", "Amount": -20000, "Balance": -411000},
+    {"Date": "2024-01-20", "Description": "Loan Repayment - Bank Loan", "Amount": -29000, "Balance": -440000},
+    {"Date": "2024-01-23", "Description": "Vendor Payment - PQR Inc.", "Amount": -27000, "Balance": -467000},
+    {"Date": "2024-01-26", "Description": "Consultancy Fee Payment", "Amount": 42000, "Balance": -425000},
+    {"Date": "2024-01-29", "Description": "Utilities Payment", "Amount": -16000, "Balance": -441000},
+
+    // February 2024
+    {"Date": "2024-02-01", "Description": "Supplier Payment - STU Corporation", "Amount": -35000, "Balance": -476000},
+    {"Date": "2024-02-04", "Description": "Salary Payment for February", "Amount": 32000, "Balance": -444000},
+    {"Date": "2024-02-07", "Description": "Client Payment - Project XYZ Completion", "Amount": 39000, "Balance": -405000},
+    {"Date": "2024-02-10", "Description": "Rent Payment for Office Space", "Amount": -24000, "Balance": -429000},
+    {"Date": "2024-02-13", "Description": "Equipment Purchase - ABC Supplier", "Amount": -39000, "Balance": -468000},
+    {"Date": "2024-02-16", "Description": "Insurance Premium Payment", "Amount": -21000, "Balance": -489000},
+    {"Date": "2024-02-19", "Description": "Loan Repayment - Bank Loan", "Amount": -30000, "Balance": -519000},
+    {"Date": "2024-02-22", "Description": "Vendor Payment - GHI Inc.", "Amount": -28000, "Balance": -547000},
+    {"Date": "2024-02-25", "Description": "Consultancy Fee Payment", "Amount": 43000, "Balance": -504000},
+    {"Date": "2024-02-28", "Description": "Utilities Payment", "Amount": -17000, "Balance": -521000},
+    // March 2024
+    {"Date": "2024-03-02", "Description": "Supplier Payment - DEF Corporation", "Amount": -32000, "Balance": -553000},
+    {"Date": "2024-03-05", "Description": "Salary Payment for March", "Amount": 33000, "Balance": -520000},
+    {"Date": "2024-03-08", "Description": "Client Payment - Project ABC Completion", "Amount": 40000, "Balance": -480000},
+    {"Date": "2024-03-11", "Description": "Rent Payment for Office Space", "Amount": -25000, "Balance": -505000},
+    {"Date": "2024-03-14", "Description": "Equipment Purchase - MNO Supplier", "Amount": -40000, "Balance": -545000},
+    {"Date": "2024-03-15", "Description": "Insurance Premium Payment", "Amount": -22000, "Balance": -567000},
+    {"Date": "2024-03-18", "Description": "Loan Repayment - Bank Loan", "Amount": -31000, "Balance": -598000},
+    {"Date": "2024-03-21", "Description": "Vendor Payment - PQR Inc.", "Amount": -27000, "Balance": -625000},
+    {"Date": "2024-03-24", "Description": "Consultancy Fee Payment", "Amount": 42000, "Balance": -583000},
+    {"Date": "2024-03-27", "Description": "Utilities Payment", "Amount": -16000, "Balance": -599000},
+    {"Date": "2024-03-30", "Description": "Client Payment - Project XYZ Completion", "Amount": 37000, "Balance": -562000}
+];
+
+        // Filter button click event
+        document.getElementById("filterButton").addEventListener("click", function() {
+            filterData();
+        });
+
+        // Function to filter data based on date range
+        function filterData() {
+            var startDate = document.getElementById("start_date").value;
+            var endDate = document.getElementById("end_date").value;
+
+            // Clear the table body
+            var tbody = document.getElementById("statementBody");
+            tbody.innerHTML = "";
+
+            // Filter the data based on the date range
+            var filteredData = data.filter(function(rowData) {
+                var transactionDate = rowData["Date"];
+                return transactionDate >= startDate && transactionDate <= endDate;
+            });
+
+            // Populate the table with filtered data
+            var statementBody = document.getElementById("statementBody");
+            statementBody.innerHTML = "";
+
+            var balance = 0; // Initial balance
+            filteredData.forEach(function(rowData) {
+                balance += rowData["Amount"]; // Update balance
+                var row = document.createElement("tr");
+                for (var key in rowData) {
+                    var cell = document.createElement("td");
+                    cell.textContent = key === "Balance" ? balance : rowData[key];
+                    row.appendChild(cell);
+                }
+                statementBody.appendChild(row);
+            });
+
+            // Show the table and download button
+            document.getElementById("statementTable").style.display = "inline-block";
+            document.getElementById("downloadButton").style.display = "block";
+        }
+
+        // Download PDF button click event
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            // Generate PDF content
+            var pdfContent = generatePDFContent();
+
+            // Generate PDF blob
+            var pdfBlob = new Blob([pdfContent], { type: "application/pdf" });
+
+            // Create a temporary anchor element
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(pdfBlob);
+            a.download = "statement.pdf";
+            
+            // Append the anchor to the body and click it programmatically
+            document.body.appendChild(a);
+            a.click();
+
+            // Remove the anchor element
+            document.body.removeChild(a);
+        });
+
+        // Function to generate PDF content
+        function generatePDFContent() {
+            var content = "Banking Statement\n\n";
+            var table = document.getElementById("statementTable");
+            var rows = table.querySelectorAll("tbody tr");
+            rows.forEach(function(row) {
+                row.querySelectorAll("td").forEach(function(cell) {
+                    content += cell.textContent + " ";
+                });
+                content += "\n";
+            });
+            return content;
+        }
+  </script>
+</body>
+
+</html>
